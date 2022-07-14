@@ -99,12 +99,16 @@ public:
   }
 
 public:
+  // Function to detect a loop in a linked list
   static void detectLoop(Node *node) {
+    // Assigning slow and fast pointer
     Node *slow_pointer = node;
     Node *fast_pointer = node;
+    // Slow pointer and fast pointer traversal
     while (slow_pointer && fast_pointer && fast_pointer->next) {
       slow_pointer = slow_pointer->next;
       fast_pointer = fast_pointer->next->next;
+      // Checking if the slow point and fast pointer meet or not
       if (slow_pointer == fast_pointer)
         std::cout << "Loop Detected" << std::endl;
     }
@@ -123,6 +127,7 @@ public:
     }
     // Assigning head to the next node
     *head_ref = temp->next;
+    // Deleting the element
     delete temp;
   }
 
@@ -131,16 +136,20 @@ public:
   static void deleteLastNode(Node **head_ref) {
     std::cout << "Deleting the Last Node" << std::endl;
     Node *temp = *head_ref;
+    // Checking if the linked list is empty or not
     if(*head_ref == nullptr){
       std::cout << "Linked List Already Empty" << std::endl;
       return;
     }
+    // Traversing till end of the linked list
     while(temp->next->next != nullptr){
       temp = temp->next;
     }
+    // Assigning the second last node to nullptr
     temp->next = nullptr;
   }
 
 public:
+  // Function to delete a node based on key
   static void deleteBasedOnKey(Node **head_ref, Data key) {}
 };
