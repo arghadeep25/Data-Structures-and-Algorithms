@@ -111,12 +111,36 @@ public:
   }
 
 public:
-  static void deleteFirstNode(Node **head_ref) {}
+  // Function to delete the first node of the linked list
+  static void deleteFirstNode(Node **head_ref) {
+    std::cout << "Deleting First Node" << std::endl;
+    // Storing the head
+    Node *temp = *head_ref;
+    // Checking if the linked list is empty or not
+    if (*head_ref == nullptr) {
+      std::cout << "Linked List Already Empty!!" << std::endl;
+      return;
+    }
+    // Assigning head to the next node
+    *head_ref = temp->next;
+    delete temp;
+  }
 
 public:
-  static void deleteLastNode(Node **head_ref) {}
+  // Function to delete the last node from the linked list
+  static void deleteLastNode(Node **head_ref) {
+    std::cout << "Deleting the Last Node" << std::endl;
+    Node *temp = *head_ref;
+    if(*head_ref == nullptr){
+      std::cout << "Linked List Already Empty" << std::endl;
+      return;
+    }
+    while(temp->next->next != nullptr){
+      temp = temp->next;
+    }
+    temp->next = nullptr;
+  }
 
 public:
-  static void deleteBasedOnKey(Node **head_ref, Data key){}
-
+  static void deleteBasedOnKey(Node **head_ref, Data key) {}
 };
