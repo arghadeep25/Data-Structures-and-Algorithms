@@ -7,6 +7,9 @@ project (cpp_practice)
 set(SRC_DIR src)
 set(INC_DIR include)
 
+add_subdirectory("${CMAKE_SOURCE_DIR}/submodules/googletest" "submodules/googletest")
+
+
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif ()
@@ -16,6 +19,6 @@ FILE(GLOB INC_FILES "include/*.hpp")
 
 add_executable(cpp_practice ${SRC_FILES} ${INC_FILES})
 target_include_directories(cpp_practice PUBLIC ${INC_DIR})
-target_link_libraries(cpp_practice stdc++fs )
+target_link_libraries(cpp_practice stdc++fs gtest)
 
 
