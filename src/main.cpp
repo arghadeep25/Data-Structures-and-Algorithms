@@ -19,4 +19,8 @@ int main(int argc, char** argv){
   Node::getNodesCount(head);
   Node::findDuplicate(head);
   Node::detectLoop(head);
+  Node::deleteFirstNode(&head);
+  Node::printList(head);
+  Node::deleteLastNode(&head);
+  Node::printList(head);
 }
