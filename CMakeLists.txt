@@ -15,7 +15,7 @@ set(INC_DIR include)
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/submodules/googletest" "submodules/googletest")
 
-set(BUILD_EXAMPLE OFF)
+set(BUILD_EXAMPLE ON)
 
 option(ENABLE_EXAMPLES "Enable examples" ${BUILD_EXAMPLE})
 
