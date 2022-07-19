@@ -34,7 +34,9 @@ else
   mkdir build && cd build
 fi
 
-#helpFunction
-echo "building without example"
+echo "---------- PARAMETERS ----------"
+echo "CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
+echo "BUILD_EXAMPLE=${BUILD_EXAMPLE}"
+echo "--------------------------------"
 cmake .. -DBUILD_EXAMPLE=$BUILD_EXAMPLE -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE
 make -j6
