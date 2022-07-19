@@ -1,3 +1,10 @@
+//============================================================================
+// Name        : doubly_linked_list.cpp
+// Author      : Arghadeep Mazumder
+// Version     : 1.0
+// Copyright   : -
+// Description :
+//============================================================================
 #include <iostream>
 #include <linked_list/doubly_linked_list.hpp>
 
