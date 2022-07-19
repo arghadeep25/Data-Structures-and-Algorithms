@@ -25,18 +25,18 @@ fi
 
 
 if [ -d "build" ]; then
-  echo "build directory present"
-  echo "cleaning the build directory"
+  echo "Build Directory Exist"
+  echo "Cleaning Build Directory"
   cd build && rm -rf *
 else
-  echo "build directory not present"
-  echo "making build directory"
+  echo "Build Directory Doesn't Exist"
+  echo "Creating Build Directory"
   mkdir build && cd build
 fi
 
-echo "---------- PARAMETERS ----------"
+echo -e "\n---------- PARAMETERS ----------"
 echo "CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}"
 echo "BUILD_EXAMPLE=${BUILD_EXAMPLE}"
-echo "--------------------------------"
+echo -e "--------------------------------\n"
 cmake .. -DBUILD_EXAMPLE=$BUILD_EXAMPLE -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE
 make -j6
