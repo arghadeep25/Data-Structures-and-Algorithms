@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : singly_linked_list.hpp
+// Name        : doubly_linked_list.hpp
 // Author      : Arghadeep Mazumder
 // Version     : 1.0
 // Copyright   : -
@@ -54,27 +54,44 @@ public:
   // Function to insert a new node at the end of the linked list
   static void insertAtBack(Node **head_ref, Data new_data) {
     std::cout << GREEN << "Inserting Node at End" << RESET << std::endl;
-    // Allocating a new node
+    // Allocating a new node with new data with next and prev as nullptr
     Node *new_node = new Node(new_data);
-    // Node *new_node = new Node();
     Node *last = *head_ref;
-    // Inserting data in the new node
-    //    new_node->data = new_data;
-    new_node->next = nullptr;
-
+    // Checking if the linked list is empty or not
     if (*head_ref == nullptr) {
+      // if empty, then making new node as head
       new_node->prev = nullptr;
       *head_ref = new_node;
       return;
     }
-
-    while (last->next != nullptr) {
+    // Traversing till the last node
+    while (last->next != nullptr)
       last = last->next;
-    }
-
+    // Changing the next of the last node
     last->next = new_node;
-
+    // Making last node as previous of new node
     new_node->prev = last;
+  }
+
+public:
+  // Inserting a new node
+  static void insertAnywhere(Node *prev_node, Data data) {
+    std::cout << GREEN << "Inserting Node at Desired Position" << RESET
+              << std::endl;
+    if (prev_node == nullptr) {
+      std::cout << BOLD << RED << "WARNING!! Given previous node can't be NULL"
+                << RESET << std::endl;
+    }
+    // Allocating New Node with new data and next of new node
+    // as next of prev node
+    Node *new_node = new Node(data, prev_node->next);
+    // Making next of prev node as new node
+    prev_node->next = new_node;
+    // Making next of prev_node as prev of new node
+    new_node->prev = prev_node;
+    // Changing previous of new_node's next
+    if(new_node->next != nullptr)
+      new_node->next->prev = new_node;
   }
 };
 } // namespace dataStructure::doublyLinkedList
