@@ -26,5 +26,5 @@ Usage: ./build.sh -b CMAKE_BUILD_TYPE -e BUILD_EXAMPLE
 	-e BUILD_EXAMPLE: ON | OFF
 ```
 ```
-./build.sh -b "Release" -e "OFF"
+./build.sh -b Release -e OFF
 ```
