@@ -8,10 +8,10 @@
 #pragma once
 #include <iostream>
 #include <gtest/gtest.h>
-#include "singly_linked_list.hpp"
+#include "linked_list/singly_linked_list.hpp"
 
 int main(int argc, char **argv) {
-  using Node = Node<int>;
+  using Node = dataStructure::singlyLinkedList::Node<int>;
   // Creating a linked list with 3 nodes
   // Creating the last node first
   auto *third = new Node(3);
