@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+# ======================================
+# Name        : build.sh
+# Author      : Arghadeep Mazumder
+# Version     : 1.0
+# Copyright   : -
+# Description :
+# ======================================
 
 helpFunction()
 {
