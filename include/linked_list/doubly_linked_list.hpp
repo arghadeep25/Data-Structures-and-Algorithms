@@ -90,8 +90,23 @@ public:
     // Making next of prev_node as prev of new node
     new_node->prev = prev_node;
     // Changing previous of new_node's next
-    if(new_node->next != nullptr)
+    if (new_node->next != nullptr)
       new_node->next->prev = new_node;
+  }
+
+public:
+  static void deleteFirstNode(Node **head_ref) {
+    std::cout << RED << "Deleting first node" << std::endl;
+    if (*head_ref == nullptr) {
+      std::cout << BOLD << RED << "WARNING!! Linked List Already Empty"
+                << std::endl;
+      return;
+    }
+    Node *temp = *head_ref;
+    *head_ref = (*head_ref)->next;
+    delete temp;
+    if(head_ref != nullptr)
+      (*head_ref)->prev = nullptr;
   }
 };
 } // namespace dataStructure::doublyLinkedList
