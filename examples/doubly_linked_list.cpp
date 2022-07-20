@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
   second->prev = head;
   third->prev = second;
 
-  std::cout << BOLD << GREEN << " ------- INSERTION -------" << std::endl;
+  MESSAGE("------- INSERTION -------");
   // Counting the number of nodes in the linked list
   Node::getNodesCount(head);
   // Printing the elements in the linked list
@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
   // Counting the number of nodes in the linked list
   Node::getNodesCount(head);
 
-  std::cout << BOLD << RED << " ------- DELETION -------" << std::endl;
+  MESSAGE(" ------- DELETION -------");
   // Deleting First Node
   Node::deleteFirstNode(&head);
   // Printing the elements in the linked list
