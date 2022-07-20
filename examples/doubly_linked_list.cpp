@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
   // Counting the number of nodes in the linked list
   Node::getNodesCount(head);
 
-  MESSAGE(" ------- DELETION -------");
+  MESSAGE("------- DELETION -------");
   // Deleting First Node
   Node::deleteFirstNode(&head);
   // Printing the elements in the linked list
@@ -55,4 +55,25 @@ int main(int argc, char **argv) {
   Node::deleteFromAnywhere(&head, head->next);
   // Printing the elements in the linked list
   Node::printAllElements(head);
+
+  MESSAGE("------- REVERSING -------");
+  // Reversing the linked list
+  Node::reserveLinkedList(&head);
+  // Printing the elements in the linked list
+  Node::printAllElements(head);
+
+  MESSAGE("------- MERGING -------");
+  Node *copy = new Node (1);
+  Node *copy2 = new Node (5);
+  Node::insertAtBack(&copy, 2);
+  Node::insertAtBack(&copy, 3);
+  Node::insertAtBack(&copy, 4);
+  Node::insertAtBack(&copy2, 6);
+  Node::insertAtBack(&copy2, 7);
+  Node::insertAtBack(&copy2, 8);
+  Node::printAllElements(copy);
+  // Reversing the linked list
+  Node::mergeLinkedList(copy, copy2);
+  // Printing the elements in the linked list
+  Node::printAllElements(copy);
 }
