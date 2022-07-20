@@ -38,6 +38,18 @@ public:
   }
 
 public:
+  static void getNodesCount(Node *node) {
+    int count = 0;
+    Node *current = node;
+    while (current != nullptr) {
+      count++;
+      current = current->next;
+    }
+    std::cout << YELLOW << "Number of Nodes in the Linked List: " << count
+              << RESET << std::endl;
+  }
+
+public:
   // Function to insert a new node at the front of the linked list
   static void insertAtFront(Node **head_ref, Data new_data) {
     std::cout << GREEN << "Inserting Node at Front" << RESET << std::endl;
@@ -95,18 +107,62 @@ public:
   }
 
 public:
+  // Function to Delete First Node
   static void deleteFirstNode(Node **head_ref) {
-    std::cout << RED << "Deleting first node" << std::endl;
+    std::cout << RED << "Deleting First Node" << std::endl;
+    // Checking if the first node is empty or not
     if (*head_ref == nullptr) {
       std::cout << BOLD << RED << "WARNING!! Linked List Already Empty"
                 << std::endl;
       return;
     }
+    // Temporarily storing the head_ref
     Node *temp = *head_ref;
+    // Pointing the head from current position to second node
     *head_ref = (*head_ref)->next;
+    // Freeing the first node
     delete temp;
-    if(head_ref != nullptr)
+    // If the current first node is not nullptr, then prev of head is nullptr
+    if (head_ref != nullptr)
       (*head_ref)->prev = nullptr;
+  }
+
+public:
+  // Function to delete the last node of the linked list
+  static void deleteLastNode(Node **head_ref) {
+    std::cout << RED << "Deleting Last Node" << std::endl;
+    // Checking if the linked list is empty or not
+    if (*head_ref == nullptr) {
+      std::cout << BOLD << RED << "WARNING!! Linked List is Already Emptyt"
+                << std::endl;
+      return;
+    }
+    Node *temp = *head_ref;
+    while (temp->next->next != nullptr)
+      temp = temp->next;
+    temp->next = nullptr;
+  }
+
+public:
+  // Function to delete a node from anywhere
+  // head_ref -> pointing to the head node
+  // del_node -> pointing to the node to be deleted
+  static void deleteFromAnywhere(Node **head_ref, Node *del_node) {
+    if (*head_ref == nullptr || del_node == nullptr) {
+      std::cout << BOLD << RED << "WARNING!! Node is Empty" << std::endl;
+      return;
+    }
+    // If the node to be deleted is the head node
+    // Pointing the head_ref to the next node
+    if(*head_ref == del_node)
+      *head_ref = del_node->next;
+    // Change next of the node if the node is not the last node
+    if(del_node->next != nullptr)
+      del_node->next->prev = del_node->prev;
+    // Change prev of the node if the node is not the first node
+    if(del_node->prev != nullptr)
+      del_node->prev->next = del_node->next;
+    delete(del_node);
   }
 };
 } // namespace dataStructure::doublyLinkedList
