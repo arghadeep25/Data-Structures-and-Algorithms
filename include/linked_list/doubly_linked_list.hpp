@@ -144,6 +144,7 @@ public:
   // head_ref -> pointing to the head node
   // del_node -> pointing to the node to be deleted
   static void deleteFromAnywhere(Node **head_ref, Node *del_node) {
+    STATUS("Deleting from Desired Position", RED);
     if (*head_ref == nullptr || del_node == nullptr) {
       WARNING("WARNING!! Node is Empty");
       return;
@@ -162,9 +163,52 @@ public:
   }
 
 public:
-  static void sortLinkedList(Node *node) {
-    if (node == nullptr || node->next == nullptr) {
-//      std::cout <<
+  // Function to reverse a linked list using Swapping
+  static void reserveLinkedList(Node **head_ref) {
+    STATUS("Reversing Linked List", YELLOW);
+    if (head_ref == nullptr) {
+      WARNING("Empty Linked List");
+      return;
+    }
+    // Making a temporary node
+    Node *temp = nullptr;
+    // This node will traverse through the linked list
+    Node *current = *head_ref;
+    // The main idea here is to swap next and prev of all nodes
+    while (current != nullptr) {
+      // Storing the current->prev
+      temp = current->prev;
+      // Swapping the current->prev with current->next
+      current->prev = current->next;
+      // Swapping the current->next with current->prev
+      current->next = temp;
+      // Making the current as current->prev
+      current = current->prev;
+    }
+    //
+    if (temp != nullptr)
+      // Changing the head
+      *head_ref = temp->prev;
+  }
+
+public:
+  // Function to merge two sorted linked list
+  static Node *mergeLinkedList(Node *first, Node *second) {
+    if (first == nullptr)
+      return second;
+    else if (second == nullptr)
+      return first;
+
+    if (first->data < second->data) {
+      first->next = mergeLinkedList(first->next, second);
+      first->next->prev = first;
+      first->prev = nullptr;
+      return first;
+    } else {
+      second->next = mergeLinkedList(first, second->next);
+      second->next->prev = second;
+      second->prev = nullptr;
+      return second;
     }
   }
 };
