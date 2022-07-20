@@ -8,6 +8,7 @@
 #pragma once
 
 #include "utils/colors.hpp"
+#include "utils/message.hpp"
 #include <iostream>
 
 namespace dataStructure::doublyLinkedList {
@@ -45,14 +46,13 @@ public:
       count++;
       current = current->next;
     }
-    std::cout << YELLOW << "Number of Nodes in the Linked List: " << count
-              << RESET << std::endl;
+    PRINT("Number of Nodes in the Linked List: ", count);
   }
 
 public:
   // Function to insert a new node at the front of the linked list
   static void insertAtFront(Node **head_ref, Data new_data) {
-    std::cout << GREEN << "Inserting Node at Front" << RESET << std::endl;
+    STATUS("Inserting Node at Front", GREEN);
     // Allocating new node with new data, next as head_ref and prev as nullptr
     Node *new_node = new Node(new_data, *head_ref);
     // Changing prev of head node to new node
@@ -65,7 +65,7 @@ public:
 public:
   // Function to insert a new node at the end of the linked list
   static void insertAtBack(Node **head_ref, Data new_data) {
-    std::cout << GREEN << "Inserting Node at End" << RESET << std::endl;
+    STATUS("Inserting Node at End", GREEN);
     // Allocating a new node with new data with next and prev as nullptr
     Node *new_node = new Node(new_data);
     Node *last = *head_ref;
@@ -88,11 +88,9 @@ public:
 public:
   // Inserting a new node
   static void insertAnywhere(Node *prev_node, Data data) {
-    std::cout << GREEN << "Inserting Node at Desired Position" << RESET
-              << std::endl;
+    STATUS("Inserting Node at Desired Position", GREEN);
     if (prev_node == nullptr) {
-      std::cout << BOLD << RED << "WARNING!! Given previous node can't be NULL"
-                << RESET << std::endl;
+      WARNING("WARNING!! Given previous node can't be NULL");
     }
     // Allocating New Node with new data and next of new node
     // as next of prev node
@@ -109,11 +107,10 @@ public:
 public:
   // Function to Delete First Node
   static void deleteFirstNode(Node **head_ref) {
-    std::cout << RED << "Deleting First Node" << std::endl;
+    STATUS("Deleting First Node", RED);
     // Checking if the first node is empty or not
     if (*head_ref == nullptr) {
-      std::cout << BOLD << RED << "WARNING!! Linked List Already Empty"
-                << std::endl;
+      WARNING("WARNING!! Linked List Already Empty");
       return;
     }
     // Temporarily storing the head_ref
@@ -130,11 +127,10 @@ public:
 public:
   // Function to delete the last node of the linked list
   static void deleteLastNode(Node **head_ref) {
-    std::cout << RED << "Deleting Last Node" << std::endl;
+    STATUS("Deleting Last Node", RED);
     // Checking if the linked list is empty or not
     if (*head_ref == nullptr) {
-      std::cout << BOLD << RED << "WARNING!! Linked List is Already Emptyt"
-                << std::endl;
+      WARNING("WARNING!! Linked List is Already Empty");
       return;
     }
     Node *temp = *head_ref;
@@ -149,20 +145,27 @@ public:
   // del_node -> pointing to the node to be deleted
   static void deleteFromAnywhere(Node **head_ref, Node *del_node) {
     if (*head_ref == nullptr || del_node == nullptr) {
-      std::cout << BOLD << RED << "WARNING!! Node is Empty" << std::endl;
+      WARNING("WARNING!! Node is Empty");
       return;
     }
     // If the node to be deleted is the head node
     // Pointing the head_ref to the next node
-    if(*head_ref == del_node)
+    if (*head_ref == del_node)
       *head_ref = del_node->next;
     // Change next of the node if the node is not the last node
-    if(del_node->next != nullptr)
+    if (del_node->next != nullptr)
       del_node->next->prev = del_node->prev;
     // Change prev of the node if the node is not the first node
-    if(del_node->prev != nullptr)
+    if (del_node->prev != nullptr)
       del_node->prev->next = del_node->next;
-    delete(del_node);
+    delete (del_node);
+  }
+
+public:
+  static void sortLinkedList(Node *node) {
+    if (node == nullptr || node->next == nullptr) {
+//      std::cout <<
+    }
   }
 };
 } // namespace dataStructure::doublyLinkedList
