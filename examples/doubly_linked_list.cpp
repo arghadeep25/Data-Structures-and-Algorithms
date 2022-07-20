@@ -11,7 +11,6 @@
 int main(int argc, char **argv) {
   using Node = dataStructure::doublyLinkedList::Node<int>;
   // Creating a doubly linked list:  1 <-> 2 <-> 3
-  // Head
   Node *head = new Node(1);
   Node *second = new Node(2);
   Node *third = new Node(3);
@@ -24,6 +23,8 @@ int main(int argc, char **argv) {
   third->prev = second;
 
   std::cout << BOLD << GREEN << " ------- INSERTION -------" << std::endl;
+  // Counting the number of nodes in the linked list
+  Node::getNodesCount(head);
   // Printing the elements in the linked list
   Node::printAllElements(head);
   // Inserting a node at front: 4 <-> 1 <-> 2 <-> 3
@@ -34,14 +35,24 @@ int main(int argc, char **argv) {
   Node::insertAtBack(&head, 7);
   // Printing the elements in the linked list
   Node::printAllElements(head);
-  // Inserting a node anywhere: 4 <-> 1 <-> 2 <-> 3 <-> 7
+  // Inserting a node anywhere: 4 <-> 1 <-> 2 <-> 3 <-> 7 <-> 8
   Node::insertAnywhere(third->next, 8);
   // Printing the elements in the linked list
   Node::printAllElements(head);
+  // Counting the number of nodes in the linked list
+  Node::getNodesCount(head);
 
   std::cout << BOLD << RED << " ------- DELETION -------" << std::endl;
   // Deleting First Node
   Node::deleteFirstNode(&head);
+  // Printing the elements in the linked list
+  Node::printAllElements(head);
+  // Deleting Last Node
+  Node::deleteLastNode(&head);
+  // Printing the elements in the linked list
+  Node::printAllElements(head);
+  // Delete any node
+  Node::deleteFromAnywhere(&head, head->next);
   // Printing the elements in the linked list
   Node::printAllElements(head);
 }
