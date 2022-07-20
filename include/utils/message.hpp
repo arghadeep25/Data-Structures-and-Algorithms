@@ -3,7 +3,7 @@
 // Author      : Arghadeep Mazumder
 // Version     : 1.0
 // Copyright   : -
-// Description :
+// Description : Different message formats created using variadic template
 //============================================================================
 #pragma once
 
