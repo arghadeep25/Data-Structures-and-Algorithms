@@ -63,17 +63,20 @@ int main(int argc, char **argv) {
   Node::printAllElements(head);
 
   MESSAGE("------- MERGING -------");
-  Node *copy = new Node (1);
-  Node *copy2 = new Node (5);
-  Node::insertAtBack(&copy, 2);
-  Node::insertAtBack(&copy, 3);
-  Node::insertAtBack(&copy, 4);
-  Node::insertAtBack(&copy2, 6);
-  Node::insertAtBack(&copy2, 7);
-  Node::insertAtBack(&copy2, 8);
-  Node::printAllElements(copy);
-  // Reversing the linked list
-  Node::mergeLinkedList(copy, copy2);
-  // Printing the elements in the linked list
-  Node::printAllElements(copy);
+  Node *mergeData1 = new Node (1);
+  Node::insertAtBack(&mergeData1, 4);
+  Node::insertAtBack(&mergeData1, 3);
+  Node::insertAtBack(&mergeData1, 2);
+
+  Node *mergeData2 = new Node (5);
+  Node::insertAtBack(&mergeData2, 8);
+  Node::insertAtBack(&mergeData2, 7);
+  Node::insertAtBack(&mergeData2, 6);
+
+  Node::mergeLinkedList(mergeData1, mergeData2);
+  Node::printAllElements(mergeData1);
+
+  MESSAGE("------- SORT -------");
+  Node *test = Node::mergeSort(mergeData1);
+  Node::printAllElements(test);
 }
