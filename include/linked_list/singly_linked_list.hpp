@@ -156,9 +156,8 @@ public:
       return;
     }
     // Traversing till end of the linked list
-    while (temp->next->next != nullptr) {
+    while (temp->next->next != nullptr)
       temp = temp->next;
-    }
     // Assigning the second last node to nullptr
     temp->next = nullptr;
   }
