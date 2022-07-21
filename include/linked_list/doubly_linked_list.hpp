@@ -211,5 +211,34 @@ public:
       return second;
     }
   }
+
+public:
+  // Function to split a linked list
+  static Node *splitLinkedList(Node *node) {
+    Node *fast = node;
+    Node *slow = node;
+    while (fast->next && fast->next->next) {
+      fast = fast->next->next;
+      slow = slow->next;
+    }
+    Node *temp = slow->next;
+    slow->next = nullptr;
+    return temp;
+  }
+
+public:
+  // Function to do merge sort
+  static Node *mergeSort(Node *node) {
+    // Ensuring if the linked list is empty or with one element
+    if (node == nullptr || !node->next)
+      return node;
+    // Split the linked list if the next element is smaller than the current
+    Node *second = splitLinkedList(node);
+    // Performing the merge sort operation on node and second
+    node = mergeSort(node);
+    second = mergeSort(second);
+    // Merging both the linked lists
+    return mergeLinkedList(node, second);
+  }
 };
 } // namespace dataStructure::doublyLinkedList
