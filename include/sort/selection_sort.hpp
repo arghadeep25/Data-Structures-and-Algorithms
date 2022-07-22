@@ -17,13 +17,6 @@ public:
   explicit SelectionSort() = default;
 
 public:
-  void printVector(const std::vector<DataType> &data) override {
-    for (const auto &elem : data)
-      std::cout << elem << " ";
-    std::cout << std::endl;
-  }
-
-public:
-  std::vector<DataType> sort(const std::vector<DataType> &data) override {}
+  std::vector<DataType> sort() override {}
 };
 } // namespace dataStructure::sort
