@@ -35,7 +35,7 @@ public:
 
 public:
   // Virtual function for sorting
-  virtual std::vector<DataType> sort() = 0;
+  virtual void sort() = 0;
 
 protected:
   std::vector<DataType> data;
