@@ -19,23 +19,21 @@ public:
   explicit BubbleSort() = default;
 
 private:
-  bool swapped;
+  void bubblesort(std::vector<DataType> &data, int size) {
+    if (size <= 1)
+      return;
+    for (int idx = 0; idx < size - 1; idx++) {
+      if (data[idx] > data[idx + 1])
+        std::swap(data[idx], data[idx + 1]);
+    }
+    bubblesort(data, size - 1);
+  }
 
 public:
   void sort() override {
     if (this->data.size() <= 1)
       return;
-    for (int idx1 = 0; idx1 < this->data.size() - 1; idx1++) {
-      swapped = false;
-      for (int idx2 = 0; idx2 < this->data.size() - idx1 - 1; idx2++) {
-        if (this->data.at(idx2) > this->data.at(idx2 + 1)) {
-          std::swap(this->data.at(idx2), this->data.at(idx2 + 1));
-          swapped = true;
-        }
-      }
-      if (!swapped)
-        break;
-    }
+    bubblesort(this->data, this->data.size());
   }
 };
 } // namespace dataStructure::sort
