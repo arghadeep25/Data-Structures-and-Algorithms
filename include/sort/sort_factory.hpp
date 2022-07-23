@@ -7,6 +7,7 @@
 //============================================================================
 #pragma once
 
+#include "sort/bubble_sort.hpp"
 #include "sort/selection_sort.hpp"
 #include <cstring>
 #include <iostream>
@@ -17,6 +18,8 @@ template <typename DataType>
 std::unique_ptr<Sort<DataType>> sortMethod(const char *sortType) {
   if (!std::strcmp(sortType, "Selection_Sort"))
     return std::make_unique<SelectionSort<DataType>>();
+  else if (!std::strcmp(sortType, "Bubble_Sort"))
+    return std::make_unique<BubbleSort<DataType>>();
   else
     return nullptr;
 }
