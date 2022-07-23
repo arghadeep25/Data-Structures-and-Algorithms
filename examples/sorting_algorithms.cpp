@@ -14,7 +14,8 @@ int main(int argc, char **argv) {
       dataStructure::Utils::generateRandomVector(15, 0, 100);
   // Name of the sorting algorithm
 //  const char *sort_type = "Selection_Sort";
-  const char *sort_type = "Bubble_Sort";
+//  const char *sort_type = "Bubble_Sort";
+  const char *sort_type = "Insertion_Sort";
   MESSAGE("Selected Sort Type: ", sort_type);
   // Passing the sorting method to the sorting algorithms factory
   auto sort_method = dataStructure::sort::sortMethod<int>(sort_type);
