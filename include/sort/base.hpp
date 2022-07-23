@@ -12,7 +12,6 @@
 
 namespace dataStructure::sort {
 template <typename DataType> class Sort {
-  // Default Contructor
 public:
   explicit Sort() = default;
 
