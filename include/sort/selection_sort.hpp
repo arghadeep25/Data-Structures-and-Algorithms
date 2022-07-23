@@ -21,6 +21,8 @@ public:
 public:
   // Function to sort the vector
   void sort() override {
+    if (this->data.size() <= 1)
+      return;
     for (int i = 0; i < this->data.size() - 1; i++) {
       DataType min = i;
       for (int j = i + 1; j < this->data.size(); j++)
