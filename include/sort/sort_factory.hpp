@@ -10,6 +10,7 @@
 #include "sort/bubble_sort.hpp"
 #include "sort/insertion_sort.hpp"
 #include "sort/selection_sort.hpp"
+#include "sort/merge_sort.hpp"
 #include <cstring>
 #include <iostream>
 #include <memory>
@@ -23,6 +24,8 @@ std::unique_ptr<Sort<DataType>> sortMethod(const char *sortType) {
     return std::make_unique<BubbleSort<DataType>>();
   else if (!std::strcmp(sortType, "Insertion_Sort"))
     return std::make_unique<InsertionSort<DataType>>();
+  else if (!std::strcmp(sortType, "Merge_Sort"))
+    return std::make_unique<MergeSort<DataType>>();
   else
     return nullptr;
 }
