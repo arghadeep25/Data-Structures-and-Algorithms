@@ -11,7 +11,7 @@
 int main(int argc, char **argv) {
   // Generating a random vector
   std::vector<int> data =
-      dataStructure::Utils::generateRandomVector(15, 0, 100);
+      dataStructure::utils::generateRandomVector(15, 0, 100);
   // Name of the sorting algorithm
 //  const char *sort_type = "Selection_Sort";
 //  const char *sort_type = "Bubble_Sort";
