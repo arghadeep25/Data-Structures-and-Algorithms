@@ -20,4 +20,9 @@ int main(int argc, char **argv) {
   // Postorder traversal
   MESSAGE("Postorder Traversal");
   tree->postOrderTraverse();
+  // Height of Tree
+  tree->height();
+  // Count the number of nodes
+  tree->countNodes();
+
 }
