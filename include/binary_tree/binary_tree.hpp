@@ -106,7 +106,10 @@ public:
 public:
   /**
    * @brief Preorder Traversal of Tree
-   * @details
+   * @details Algorithm Preorder(tree)
+   *           1. Visit the root.
+   *           2. Traverse the left subtree
+   *           3. Traverse the right subtree
    */
   void preOrderTraverse() {
     preOrderTraverse(root);
@@ -130,7 +133,10 @@ private:
 public:
   /**
    * @brief Postorder Traversal of Tree
-   * @details
+   * @details Algorithm Postorder
+   *           1. Traverse the left subtree
+   *           2. Traverse the right subtree
+   *           3. Visit the root.
    */
   void postOrderTraverse() {
     postOrderTraverse(root);
@@ -154,7 +160,10 @@ private:
 public:
   /**
    * @brief Inorder Traversal of Tree
-   * @details
+   * @details Algorithm Inorder
+   *           1. Traverse the left subtree
+   *           2. Visit the root.
+   *           3. Traverse the right subtree
    */
   void inOrderTraverse() {
     traverse(root);
@@ -176,6 +185,54 @@ private:
   }
 
 public:
+  /**
+   * @brief Function to find depth or height of tree
+   * @details
+   */
+  void height() {
+    if (root == nullptr) {
+      STATUS("Tree is Empty!!", RED);
+      return;
+    }
+    int depth = height(root);
+    MESSAGE("Tree Depth: ", depth);
+  }
+
+private:
+  int height(Node *leaf) {
+    if (leaf == nullptr)
+      return -1;
+    else {
+      int lheight = height(leaf->left);
+      int rheight = height(leaf->right);
+      return std::max(lheight, rheight) + 1;
+    }
+  }
+
+public:
+  /**
+   * @brief Count the Number of nodes in a tree
+   */
+  void countNodes() {
+    if (root == nullptr)
+      return;
+    int nodes = countNodes(root);
+    MESSAGE("Number of Nodes: ", nodes);
+
+  }
+private:
+  /**
+   * @brief
+   * @param leaf
+   * @return number of nodes
+   */
+  int countNodes(Node *leaf){
+    if(leaf == nullptr)
+      return 0;
+    return 1 + (countNodes(leaf->left) + countNodes(leaf->right));
+  }
+
+public:
   // Function to check the type of the tree
   // #TODO check the tree is full or complete or perfect  or skewed or
   // degenerate binary tree
@@ -190,14 +247,6 @@ public:
 public:
   // Function to remove
   static void remove() {}
-
-public:
-  // Function to find the depth of the tree
-  static void depth() {}
-
-public:
-  // Function to find the height of the tree
-  static void height() {}
 
 private:
   Node *root;
