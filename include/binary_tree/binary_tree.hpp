@@ -199,6 +199,11 @@ public:
   }
 
 private:
+  /**
+   * @brief Compute height of tree recursively
+   * @param leaf
+   * @return height of tree
+   */
   int height(Node *leaf) {
     if (leaf == nullptr)
       return -1;
@@ -241,7 +246,7 @@ public:
 public:
   // Function to find the diameter of the tree
   // Definition: The number of nodes on the longest path between two end nodes.
-  // #TODO
+  // TODO
   static void treeDiameter() {}
 
 public:
