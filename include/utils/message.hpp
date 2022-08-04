@@ -83,7 +83,7 @@ template <typename T> void MESSAGE(T t) { std::cout << CYAN << t << std::endl; }
  * @details
  */
 template <typename T, typename... Args> void MESSAGE(T t, Args... args) {
-  std::cout << CYAN << t << std::endl;
+  std::cout << CYAN << t;
   MESSAGE(args...);
 }
 
