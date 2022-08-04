@@ -13,7 +13,7 @@
 #include <random>
 #include <vector>
 
-namespace dataStructure::Utils {
+namespace dataStructure::utils {
 // Function to generate a random vector
 // Params:-
 // size: size of the vector
