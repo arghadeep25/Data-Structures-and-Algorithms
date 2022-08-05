@@ -26,5 +26,7 @@ int main(int argc, char **argv) {
   tree->countNodes();
   // Tree Diameter
   tree->treeDiameter();
+  // Tree Type
+  tree->checkTreeType();
 
 }
