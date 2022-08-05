@@ -13,9 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Add submodule
-        run: git submodule update --init --recursive
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+        with:
+          remote: true
+
       - name: Build
         shell: bash
         run: ./build.sh -b Release -e OFF
