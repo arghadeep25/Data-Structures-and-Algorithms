@@ -207,11 +207,8 @@ private:
   int height(Node *leaf) {
     if (leaf == nullptr)
       return -1;
-    else {
-      int lheight = height(leaf->left);
-      int rheight = height(leaf->right);
-      return std::max(lheight, rheight) + 1;
-    }
+    else
+      return std::max(height(leaf->left), height(leaf->right)) + 1;
   }
 
 public:
@@ -223,16 +220,16 @@ public:
       return;
     int nodes = countNodes(root);
     MESSAGE("Number of Nodes: ", nodes);
-
   }
+
 private:
   /**
    * @brief
    * @param leaf
    * @return number of nodes
    */
-  int countNodes(Node *leaf){
-    if(leaf == nullptr)
+  int countNodes(Node *leaf) {
+    if (leaf == nullptr)
       return 0;
     return 1 + (countNodes(leaf->left) + countNodes(leaf->right));
   }
@@ -244,10 +241,35 @@ public:
   static void checkTreeType() {}
 
 public:
-  // Function to find the diameter of the tree
-  // Definition: The number of nodes on the longest path between two end nodes.
-  // TODO
-  static void treeDiameter() {}
+  /**
+   * @brief Function to find the diameter of the tree
+   * @details The number of nodes on the longest path between two end nodes.
+   */
+  void treeDiameter() {
+    if (root == nullptr) {
+      MESSAGE("Diameter of Tree: 0");
+      return;
+    }
+    int dia = treeDiameter(root);
+    MESSAGE("Diameter of Tree: ", dia);
+  }
+
+private:
+  /**
+   * @param leaf
+   * @return diameter of the tree
+   */
+  int treeDiameter(Node *leaf) {
+    if (leaf == nullptr)
+      return 0;
+    int lheight = height(leaf->left);
+    int rheight = height(leaf->right);
+
+    int ldia = treeDiameter(leaf->left);
+    int rdia = treeDiameter(leaf->right);
+
+    return std::max(lheight + rheight + 1, std::max(ldia, rdia));
+  }
 
 public:
   // Function to remove
