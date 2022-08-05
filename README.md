@@ -1,9 +1,10 @@
 # Data Structure and Algorithms
 
-![workflow](https://github.com/arghadeep25/Data_Structure_Cpp/actions/workflows/cmake.yml/badge.svg) 
-![lines](https://tokei.rs/b1/github/arghadeep25/Data_Structure_Cpp) 
-![visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Farghadeep25%2FData_Structure_Cpp&countColor=%23263759)
+![workflow](https://github.com/arghadeep25/Data-Structures-and-Algorithms/actions/workflows/cmake.yml/badge.svg) 
+![lines](https://tokei.rs/b1/github/arghadeep25/Data-Structures-and-Algorithms)
+![visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Farghadeep25%2FData-Structures-and-Algorithms&countColor=%23263759)
 
+![Data-Structures-and-Algorithms](https://socialify.git.ci/arghadeep25/Data-Structures-and-Algorithms/image?description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Charlie%20Brown&stargazers=1&theme=Dark)
 ### Content
 
 | Content                                                                                  | Status                                           |
