@@ -17,9 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
-        with:
-          remote: true
+        uses: git submodule update --init --recursive
 
       - name: Build
         shell: bash
