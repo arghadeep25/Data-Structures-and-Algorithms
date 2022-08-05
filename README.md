@@ -1,14 +1,21 @@
 # Data Structure and Algorithms
 
-![example workflow](https://github.com/arghadeep25/Data_Structure_Cpp/actions/workflows/cmake.yml/badge.svg)
+![workflow](https://github.com/arghadeep25/Data_Structure_Cpp/actions/workflows/cmake.yml/badge.svg) 
+![lines](https://tokei.rs/b1/github/arghadeep25/Data_Structure_Cpp) 
+![visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Farghadeep25%2FData_Structure_Cpp&countColor=%23263759)
 
 ### Content
 
-| Content            | Status |
-|--------------------|--------|
-| Array              | &check; |
-| Singly Linked List | &cross; |
-| Doubly Linked List | _ |
+| Content                                                                                  | Status                                           |
+|------------------------------------------------------------------------------------------|--------------------------------------------------|
+| Array                                                                                    | &check;                                          |
+| Singly Linked List                                                                       | &check;                                          |
+| Doubly Linked List                                                                       | &check;                                          |
+| Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
+| Binary Tree                                                                              | -                                                |
+| Stacks                                                                                   | &cross;                                          |
+| Queues                                                                                   | &cross;                                          |
+| Hashing                                                                                  | &cross;                                          |
 
 ### Usage
 
@@ -18,7 +25,7 @@ cd Data_Structure_Cpp
 git submodule update --init --recursive 
 ```
 
-#### Build Script
+#### Build Script (Recommended)
 Build Helper
 ```
 Usage: ./build.sh -b CMAKE_BUILD_TYPE -e BUILD_EXAMPLE
