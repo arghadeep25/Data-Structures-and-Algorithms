@@ -235,12 +235,6 @@ private:
   }
 
 public:
-  // Function to check the type of the tree
-  // #TODO check the tree is full or complete or perfect  or skewed or
-  // degenerate binary tree
-  static void checkTreeType() {}
-
-public:
   /**
    * @brief Function to find the diameter of the tree
    * @details The number of nodes on the longest path between two end nodes.
@@ -256,19 +250,119 @@ public:
 
 private:
   /**
+   * @brief Counting the dia of a tree recursively
+   * @details Computing the diameter by returning the max of
+   *          diameter of left subtree
+   *          diameter of right subtree
+   *          Sum(left subtree, right subtree, 1)
    * @param leaf
    * @return diameter of the tree
    */
   int treeDiameter(Node *leaf) {
     if (leaf == nullptr)
       return 0;
+    // height of left and right subtrees
     int lheight = height(leaf->left);
     int rheight = height(leaf->right);
-
+    // get the diameter of left and right subtrees
     int ldia = treeDiameter(leaf->left);
     int rdia = treeDiameter(leaf->right);
 
     return std::max(lheight + rheight + 1, std::max(ldia, rdia));
+  }
+
+public:
+  // Function to check the type of the tree
+  // #TODO check the tree is full or complete or perfect  or skewed or
+  // degenerate binary tree
+  void checkTreeType() {
+    int nodes = countNodes(root);
+    if (root == nullptr) {
+      STATUS("Empty Tree", RED);
+      return;
+    }
+    if (fullBinary(root))
+      STATUS("Full Binary Tree", GREEN);
+
+    if (completeBinary(root, 0, nodes))
+      STATUS("Complete Binary Tree", GREEN);
+
+    if (perfectBianry(root, leafDepth(root)))
+      STATUS("Perfect Binary Tree", GREEN);
+  }
+
+private:
+  /**
+   * @brief Recursive function to check if the tree is full binary
+   * @details A Binary Tree is said to be a Full Binary Tree
+   *          if every node has zero or two children.
+   * @param leaf
+   * @return
+   */
+  bool fullBinary(Node *leaf) {
+    if (root == nullptr)
+      return true;
+    if (leaf->left == nullptr && leaf->right == nullptr)
+      return true;
+    else if (leaf->left && leaf->right)
+      return (fullBinary(leaf->right) && fullBinary(leaf->right));
+    return false;
+  }
+
+private:
+  /**
+   * @brief
+   * @details A complete binary tree is a binary tree whose all
+   *          levels except the last level are completely filled
+   *          and all the leaves in the last level are all to the left side.
+   * @param leaf
+   * @param index
+   * @param nodes
+   * @return
+   */
+  bool completeBinary(Node *leaf, unsigned int index, unsigned int nodes) {
+    if (leaf == nullptr)
+      return true;
+    if (index >= nodes)
+      return false;
+    return (completeBinary(leaf->left, 2 * index + 1, nodes) &&
+            completeBinary(leaf->right, 2 * index + 2, nodes));
+  }
+
+private:
+  /**
+   * @brief Function to find the depth of leftmost leaf
+   * @param leaf
+   * @return
+   */
+  int leafDepth(Node *leaf) {
+    int depth = 0;
+    while (leaf != nullptr) {
+      depth += 1;
+      leaf = leaf->left;
+    }
+    return depth;
+  }
+
+private:
+  /**
+   * @brief Recursive function to check if the tree is perfect or not
+   * @details A Binary tree is Perfect Binary Tree in which all internal
+   *          nodes have two children and all leaves are at same level.
+   * @param leaf
+   * @param depth
+   * @param level
+   * @return
+   */
+  bool perfectBianry(Node *leaf, unsigned int depth, unsigned int level = 0) {
+    if (leaf == nullptr)
+      return true;
+    if (leaf->left == nullptr && leaf->right == nullptr)
+      return depth == level + 1;
+    if (leaf->left == nullptr || leaf->right == nullptr)
+      return false;
+    return perfectBianry(leaf->left, depth, level + 1) &&
+           perfectBianry(leaf->right, depth, level + 1);
   }
 
 public:
