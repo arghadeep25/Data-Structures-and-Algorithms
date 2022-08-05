@@ -7,16 +7,16 @@
 ![Data-Structures-and-Algorithms](https://socialify.git.ci/arghadeep25/Data-Structures-and-Algorithms/image?description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Charlie%20Brown&stargazers=1&theme=Dark)
 ### Content
 
-| Content                                                                                  | Status                                           |
-|------------------------------------------------------------------------------------------|--------------------------------------------------|
-| Array                                                                                    | &check;                                          |
-| Singly Linked List                                                                       | &check;                                          |
-| Doubly Linked List                                                                       | &check;                                          |
+| Content                                                                                  | Status                                          |
+|------------------------------------------------------------------------------------------|-------------------------------------------------|
+| Array                                                                                    | &check;                                         |
+| Singly Linked List                                                                       | &check;                                         |
+| Doubly Linked List                                                                       | &check;                                         |
 | Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
-| Binary Tree                                                                              | -                                                |
-| Stacks                                                                                   | &cross;                                          |
-| Queues                                                                                   | &cross;                                          |
-| Hashing                                                                                  | &cross;                                          |
+| Binary Tree                                                                              | -                                               |
+| Stacks                                                                                   | &cross;                                         |
+| Queues                                                                                   | &cross;                                         |
+| Hashing                                                                                  | &cross;                                         |
 
 ### Usage
 
