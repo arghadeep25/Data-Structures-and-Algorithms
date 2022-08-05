@@ -24,5 +24,7 @@ int main(int argc, char **argv) {
   tree->height();
   // Count the number of nodes
   tree->countNodes();
+  // Tree Diameter
+  tree->treeDiameter();
 
 }
