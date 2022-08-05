@@ -1,3 +1,6 @@
+# Data Structure and Algorithms
+
+![example workflow](https://github.com/arghadeep25/Data_Structure_Cpp/actions/workflows/cmake.yml/badge.svg)
 ### Usage
 
 ```
