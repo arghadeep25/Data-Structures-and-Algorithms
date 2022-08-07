@@ -36,4 +36,6 @@ int main(int argc, char **argv) {
   tree->treeDiameter();
   // Tree Type
   tree->checkTreeType();
+  // Mirror the tree
+  tree->mirrorBinaryTree();
 }
