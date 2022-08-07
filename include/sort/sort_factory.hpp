@@ -18,6 +18,12 @@
 
 namespace dataStructure::sort {
 template <typename DataType>
+/**
+ * @details Function to select the sorting method
+ * @tparam DataType data type
+ * @param sortType string of sort type
+ * @return unique pointer of sort class
+ */
 std::unique_ptr<Sort<DataType>> sortMethod(const char *sortType) {
   if (!std::strcmp(sortType, "Selection_Sort"))
     return std::make_unique<SelectionSort<DataType>>();

@@ -15,11 +15,22 @@
 #include <iostream>
 
 namespace dataStructure::sort {
+/**
+ * @brief Bubble Sort
+ * @details Bubble Sort Algorithm Class
+ * @tparam DataType
+ */
 template <typename DataType> class BubbleSort : public Sort<DataType> {
 public:
   explicit BubbleSort() = default;
 
 private:
+  /**
+   * @brief Bubble Sort Algorithm
+   * @details Recursive implementation of Bubble Sort Algorithm
+   * @param data Vector of unsorted data
+   * @param size Size of data
+   */
   void bubblesort(std::vector<DataType> &data, int size) {
     if (size <= 1)
       return;
@@ -31,6 +42,9 @@ private:
   }
 
 public:
+  /**
+   * @details Public function for sorting
+   */
   void sort() override {
     if (this->data.size() <= 1)
       return;

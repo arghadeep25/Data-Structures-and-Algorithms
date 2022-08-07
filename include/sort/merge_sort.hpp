@@ -16,11 +16,23 @@
 #include <iostream>
 
 namespace dataStructure::sort {
+/**
+ * @brief Merge Sort Algorithm
+ * @details Class for Merge Sort Algorithm
+ * @tparam DataType
+ */
 template <typename DataType> class MergeSort : public Sort<DataType> {
 public:
   explicit MergeSort() = default;
 
 private:
+  /**
+   * @brief Merge Sort Implementation
+   * @details Function to perform merge sort
+   * @tparam Iterator Iterator
+   * @param first begin iterator of a vector
+   * @param last end iterator of a vector
+   */
   template <typename Iterator> void mergesort(Iterator first, Iterator last) {
     typedef typename std::iterator_traits<Iterator>::value_type value_type;
     typedef typename std::iterator_traits<Iterator>::difference_type
@@ -37,6 +49,10 @@ private:
   }
 
 public:
+  /**
+   * @brief Sort function
+   * @details Public function inherited from Sort base class
+   */
   void sort() override {
     if (this->data.size() <= 1)
       return;

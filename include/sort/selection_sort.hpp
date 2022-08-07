@@ -15,12 +15,23 @@
 #include <iostream>
 
 namespace dataStructure::sort {
+/**
+ * @brief Selection Sort Class
+ * @details Selection Sort Algorithm
+ * @tparam DataType
+ */
 template <typename DataType> class SelectionSort : public Sort<DataType> {
 public:
+  /**
+   * @details Default Contructor
+   */
   explicit SelectionSort() = default;
 
 public:
-  // Function to sort the vector
+  /**
+   * @brief Selection Sort
+   * @details Implementation of Selection Sort
+   */
   void sort() override {
     if (this->data.size() <= 1)
       return;
