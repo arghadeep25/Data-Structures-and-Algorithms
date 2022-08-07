@@ -1,16 +1,17 @@
-//============================================================================
-// Name        : sort_factory.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description : Sort Algorithm Factory
-//============================================================================
+/************************************
+ * @file sort_factory.hpp
+ * @details Sort Factory
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include "sort/bubble_sort.hpp"
 #include "sort/insertion_sort.hpp"
-#include "sort/selection_sort.hpp"
 #include "sort/merge_sort.hpp"
+#include "sort/selection_sort.hpp"
 #include <cstring>
 #include <iostream>
 #include <memory>

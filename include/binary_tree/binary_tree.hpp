@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : binary_tree.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description : Binary Tree
-//============================================================================
+/************************************
+ * @file binary_tree.hpp
+ * @details Binary Tree Header
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include "utils/message.hpp"
@@ -187,7 +188,7 @@ private:
 public:
   /**
    * @brief Function to find depth or height of tree
-   * @details
+   * @details Function to find depth or height of tree
    */
   void height() {
     if (root == nullptr) {
@@ -213,7 +214,7 @@ private:
 
 public:
   /**
-   * @brief Count the Number of nodes in a tree
+   * @details Count the Number of nodes in a tree
    */
   void countNodes() {
     if (root == nullptr)
@@ -224,7 +225,6 @@ public:
 
 private:
   /**
-   * @brief
    * @param leaf
    * @return number of nodes
    */
@@ -236,8 +236,8 @@ private:
 
 public:
   /**
-   * @brief Function to find the diameter of the tree
-   * @details The number of nodes on the longest path between two end nodes.
+   * @details  Function to find the diameter of the tree
+   * @brief The number of nodes on the longest path between two end nodes.
    */
   void treeDiameter() {
     if (root == nullptr) {

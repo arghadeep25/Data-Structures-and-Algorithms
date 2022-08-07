@@ -1,14 +1,15 @@
-//============================================================================
-// Name        : singly_linked_list.cpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description :
-//============================================================================
+/************************************
+ * @file singly_linked_list.hpp
+ * @details Singly Linked List Example
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
-#include <iostream>
-#include <gtest/gtest.h>
 #include "linked_list/singly_linked_list.hpp"
+#include <gtest/gtest.h>
+#include <iostream>
 
 int main(int argc, char **argv) {
   using Node = dataStructure::singlyLinkedList::Node<int>;
@@ -27,7 +28,7 @@ int main(int argc, char **argv) {
   // Printing the linked list
   Node::printList(head);
   // Inserting an element at the end of the linked list
-  Node::insertAtLast(&head,9);
+  Node::insertAtLast(&head, 9);
   // Printing the linked list
   Node::printList(head);
   // Inserting an element at a desired position in the linked list

@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : colors.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description :
-//============================================================================
+/************************************
+ * @file colors.hpp
+ * @details Terminal Color Messages
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #define RESET "\033[0m"

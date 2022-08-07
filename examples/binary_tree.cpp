@@ -1,3 +1,11 @@
+/************************************
+ * @file binary_tree.cpp
+ * @details Binary Tree Examples
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #include "binary_tree/binary_tree.hpp"
 #include "utils/rand_vec.hpp"
 #include <iostream>
@@ -28,5 +36,4 @@ int main(int argc, char **argv) {
   tree->treeDiameter();
   // Tree Type
   tree->checkTreeType();
-
 }

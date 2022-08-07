@@ -1,12 +1,13 @@
-//============================================================================
-// Name        : selection_sort.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description : Selection Sort Algorithm
-// Time Complexity: O(N^2)
-// Space Complexity: O(1)
-//============================================================================
+/************************************
+ * @file selection_sort.hpp
+ * @details Selection Sort Algorithm
+ *         Time Complexity: O(N^2)
+ *         Space Complexity: O(1)
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include "base.hpp"

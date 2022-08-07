@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : base.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description : Base Class for Sorting Algorithms
-//============================================================================
+/************************************
+* @file base.hpp
+* @details Base Class for Sorting Algorithms
+* @author Arghadeep Mazumder
+* @version 1.0.0
+* @copyright -
+************************************/
+
 #pragma once
 
 #include <iostream>

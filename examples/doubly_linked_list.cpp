@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : doubly_linked_list.cpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description :
-//============================================================================
+/************************************
+ * @file doubly_linked_list.hpp
+ * @details Doubly Linked List Example
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #include <iostream>
 #include <linked_list/doubly_linked_list.hpp>
 
@@ -63,12 +64,12 @@ int main(int argc, char **argv) {
   Node::printAllElements(head);
 
   MESSAGE("------- MERGING -------");
-  Node *mergeData1 = new Node (1);
+  Node *mergeData1 = new Node(1);
   Node::insertAtBack(&mergeData1, 4);
   Node::insertAtBack(&mergeData1, 3);
   Node::insertAtBack(&mergeData1, 2);
 
-  Node *mergeData2 = new Node (5);
+  Node *mergeData2 = new Node(5);
   Node::insertAtBack(&mergeData2, 8);
   Node::insertAtBack(&mergeData2, 7);
   Node::insertAtBack(&mergeData2, 6);

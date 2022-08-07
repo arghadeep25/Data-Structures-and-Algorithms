@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : singly_linked_list.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description :
-//============================================================================
+/************************************
+ * @file singly_linked_list.hpp
+ * @details Singly Linked List Header
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include <iostream>

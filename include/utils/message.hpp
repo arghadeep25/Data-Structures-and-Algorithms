@@ -1,10 +1,10 @@
-//============================================================================
-// Name        : message.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description : Different message formats created using variadic template
-//============================================================================
+/************************************
+ * @file message.hpp
+ * @details Message formats
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
 #pragma once
 
 #include "colors.hpp"
@@ -94,9 +94,7 @@ template <typename T, typename... Args> void MESSAGE(T t, Args... args) {
  * @param t
  * @details
  */
-template <typename T> void PRINT(T t) {
-  std::cout << MAGENTA << t << " ";
-}
+template <typename T> void PRINT(T t) { std::cout << MAGENTA << t << " "; }
 
 /**
  * @brief
@@ -112,16 +110,13 @@ template <typename T, typename... Args> void PRINT(T t, Args... args) {
   std::cout << std::endl;
 }
 
-
 /**
  * @brief
  * @tparam T
  * @param t
  * @details
  */
-template <typename T> void PRINT_DATA(T t) {
-  std::cout << GREEN << t << ", ";
-}
+template <typename T> void PRINT_DATA(T t) { std::cout << GREEN << t << ", "; }
 
 /**
  * @brief Function to print data in an array or vector
@@ -132,7 +127,7 @@ template <typename T> void PRINT_DATA(T t) {
  * @details Output format 1, 2, 3,
  *          Usage: PRINT_DATA(val)
  */
-template<typename T, typename... Args> void PRINT_DATA(T t, Args... args){
+template <typename T, typename... Args> void PRINT_DATA(T t, Args... args) {
   std::cout << GREEN << t << ", ";
   PRINT_DATA(args...);
 }

@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : rand_vec.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description :
-//============================================================================
+/************************************
+ * @file rand_vec.hpp
+ * @details Random Vector Generator
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include <algorithm>
@@ -33,4 +34,4 @@ std::vector<DataType> generateRandomVector(const int size,
   std::generate(std::begin(randVec), std::end(randVec), generate);
   return randVec;
 }
-} // namespace dataStructure::Utils
+} // namespace dataStructure::utils

@@ -1,12 +1,13 @@
-//============================================================================
-// Name        : merge_sort.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description : Merge Sort Algorithm
-// Time Complexity: O(nlogn)
-// Space Complexity: O(1)
-//============================================================================
+/************************************
+ * @file merge_sort.hpp
+ * @details Merge Sort Algorithm
+ *         Time Complexity: O(NlogN)
+ *         Space Complexity: O(1)
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include "base.hpp"

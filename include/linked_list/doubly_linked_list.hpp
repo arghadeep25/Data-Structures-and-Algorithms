@@ -1,10 +1,11 @@
-//============================================================================
-// Name        : doubly_linked_list.hpp
-// Author      : Arghadeep Mazumder
-// Version     : 1.0
-// Copyright   : -
-// Description :
-//============================================================================
+/************************************
+ * @file doubly_linked_list.hpp
+ * @details Doubly Linked List Header
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
+
 #pragma once
 
 #include "utils/colors.hpp"
