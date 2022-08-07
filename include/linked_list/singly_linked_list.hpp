@@ -14,6 +14,11 @@
 #include "utils/colors.hpp"
 
 namespace dataStructure::singlyLinkedList {
+/**
+ * @brief Singly Linked List
+ * @details Class for Singly Linked List
+ * @tparam Data Data Type e.g int, float
+ */
 template <typename Data> class Node {
 public:
   Data data;
@@ -25,7 +30,11 @@ public:
   Node(Data new_data, Node *new_node) : data(new_data), next(new_node) {}
 
 public:
-  // Function to print the elements in the linked list
+  /**
+   * @brief Print Linked List
+   * @details Function to print the linked list
+   * @param node Node
+   */
   static void printList(Node *node) {
     std::cout << YELLOW << "Elements in Singly Linked List: ";
     while (node != nullptr) {
@@ -36,7 +45,12 @@ public:
   }
 
 public:
-  // Insert a new node at the beginning of the linked list
+  /**
+   * @brief Insert Element at Front
+   * @details Function to insert an element at the front of the linked list
+   * @param head_ref Head of the linked list
+   * @param new_data Data
+   */
   static void insertAtFront(Node **head_ref, Data new_data) {
     std::cout << GREEN << "Inserting Node at Front" << RESET << std::endl;
     // Allocating New Node
@@ -46,7 +60,12 @@ public:
   }
 
 public:
-  // Function to insert a new node at the end of the linked list
+  /**
+   * @brief Insert Element at Last
+   * @details Function to insert an element at the last of the linked list
+   * @param head_ref Head of the linked list
+   * @param new_data Data
+   */
   static void insertAtLast(Node **head_ref, Data new_data) {
     std::cout << GREEN << "Inserting Node at End" << RESET << std::endl;
     // Allocating New Node with data and as it will be the last node
@@ -65,6 +84,12 @@ public:
   }
 
 public:
+  /**
+   * @brief Insert element anywhere
+   * @details Function to insert an element anywhere at the linked list
+   * @param prev_node Previous Node of the linked list
+   * @param new_data Data
+   */
   static void insertAnywhere(Node *prev_node, Data new_data) {
     std::cout << GREEN << "Inserting Node at Desired Position" << RESET
               << std::endl;
@@ -81,7 +106,11 @@ public:
   }
 
 public:
-  // Get number of nodes in a linked list
+  /**
+   * @brief Count number of nodes
+   * @details Function to count the number of nodes in the linked list
+   * @param node Node
+   */
   static void getNodesCount(Node *node) {
     int count = 0;
     Node *current = node;
@@ -94,8 +123,12 @@ public:
   }
 
 public:
-  // Find if there is any duplicate element in the linked list using hash table
-  // Time Complexity O(n)
+  /**
+   * @brief Find duplicate elements
+   * @details Function to find duplicate elements in the linked list using hash
+   *          table Time Complexity: O(n)
+   * @param node Node
+   */
   static void findDuplicate(Node *node) {
     if (node == nullptr)
       std::cout << CYAN << "No duplicate elements" << RESET << std::endl;
@@ -113,7 +146,11 @@ public:
   }
 
 public:
-  // Function to detect a loop in a linked list
+  /**
+   * @brief Loop Detection
+   * @details Function to detect a loop in the linked list
+   * @param node Node
+   */
   static void detectLoop(Node *node) {
     // Assigning slow and fast pointer
     Node *slow_pointer = node;
@@ -129,7 +166,11 @@ public:
   }
 
 public:
-  // Function to delete the first node of the linked list
+  /**
+   * @brief Delete first node
+   * @details Function to delete first node of the linked list
+   * @param head_ref head reference of the linked list
+   */
   static void deleteFirstNode(Node **head_ref) {
     std::cout << RED << "Deleting First Node" << RESET << std::endl;
     // Storing the head
@@ -147,7 +188,11 @@ public:
   }
 
 public:
-  // Function to delete the last node from the linked list
+  /**
+   * @brief Delete Last Node
+   * @details Function to delete last node of the linked list
+   * @param head_ref  head reference
+   */
   static void deleteLastNode(Node **head_ref) {
     std::cout << RED << "Deleting the Last Node" << std::endl;
     Node *temp = *head_ref;
@@ -164,7 +209,13 @@ public:
   }
 
 public:
-  // Function to delete a node based on key
+  /**
+   * @brief Delete based on key
+   * @details Function to delete a node based on the key element
+   * @todo Need to implement 
+   * @param head_ref head reference
+   * @param key value of the key
+   */
   static void deleteBasedOnKey(Node **head_ref, Data key) {}
 };
 } // namespace dataStructure::singlyLinkedList
