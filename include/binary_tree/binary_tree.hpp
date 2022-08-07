@@ -10,6 +10,7 @@
 
 #include "utils/message.hpp"
 #include <iostream>
+#include <queue>
 #include <vector>
 
 namespace dataStructure::binary_tree {
@@ -21,15 +22,24 @@ namespace dataStructure::binary_tree {
  */
 template <typename DataType> class BinaryTree {
 public:
+  /**
+   * @details Tree Format
+   */
   struct Node {
     DataType data;
     Node *left = nullptr;
     Node *right = nullptr;
   };
 
+  /**
+   * @details Default Constructor
+   */
 public:
   BinaryTree() = default;
 
+  /**
+   * @details  Default Destructor
+   */
 public:
   ~BinaryTree() = default;
 
@@ -272,9 +282,15 @@ private:
   }
 
 public:
-  // Function to check the type of the tree
-  // #TODO check the tree is full or complete or perfect  or skewed or
-  // degenerate binary tree
+  /**
+   * @brief Binary Tree type
+   * @details Function to check the type of binary tree.
+   *          Empty Tree
+   *          Full Binary Tree
+   *          Complete Binary Tree
+   *          Perfect Binary Tree
+   *          Skewed Binary Tree
+   */
   void checkTreeType() {
     int nodes = countNodes(root);
     if (root == nullptr) {
@@ -287,8 +303,11 @@ public:
     if (completeBinary(root, 0, nodes))
       STATUS("Complete Binary Tree", GREEN);
 
-    if (perfectBianry(root, leafDepth(root)))
+    if (perfectBinary(root, leafDepth(root)))
       STATUS("Perfect Binary Tree", GREEN);
+
+    if (skewedBinary(root))
+      STATUS("Skewed Binary Tree", GREEN);
   }
 
 private:
@@ -318,7 +337,7 @@ private:
    * @param leaf
    * @param index
    * @param nodes
-   * @return
+   * @return true or false
    */
   bool completeBinary(Node *leaf, unsigned int index, unsigned int nodes) {
     if (leaf == nullptr)
@@ -333,7 +352,7 @@ private:
   /**
    * @brief Function to find the depth of leftmost leaf
    * @param leaf
-   * @return
+   * @return true or false
    */
   int leafDepth(Node *leaf) {
     int depth = 0;
@@ -352,17 +371,63 @@ private:
    * @param leaf
    * @param depth
    * @param level
-   * @return
+   * @return true or false
    */
-  bool perfectBianry(Node *leaf, unsigned int depth, unsigned int level = 0) {
+  bool perfectBinary(Node *leaf, unsigned int depth, unsigned int level = 0) {
     if (leaf == nullptr)
       return true;
     if (leaf->left == nullptr && leaf->right == nullptr)
       return depth == level + 1;
     if (leaf->left == nullptr || leaf->right == nullptr)
       return false;
-    return perfectBianry(leaf->left, depth, level + 1) &&
-           perfectBianry(leaf->right, depth, level + 1);
+    return perfectBinary(leaf->left, depth, level + 1) &&
+           perfectBinary(leaf->right, depth, level + 1);
+  }
+
+private:
+  /**
+   * @details Function to check whether a binary tree is skewed
+   * @param leaf
+   * @return true or false
+   */
+  bool skewedBinary(Node *leaf) {
+    if (leaf == nullptr || (leaf->left == nullptr && leaf->right == nullptr))
+      return true;
+    if (leaf->left && leaf->right)
+      return false;
+    if (leaf->left)
+      return skewedBinary(leaf->left);
+    return skewedBinary(leaf->right);
+  }
+
+public:
+  /**
+   * @details Mirroring a binary tree
+   */
+  void mirrorBinaryTree() {
+    MESSAGE("Mirroring the Tree");
+    mirrorBinaryTree(root);
+  }
+
+private:
+  /**
+   * @brief Mirror a binary tree
+   * @details Function to mirror a binary tree
+   * @param leaf
+   */
+  void mirrorBinaryTree(Node *leaf) {
+    if (leaf == nullptr)
+      return;
+    std::queue<Node *> temp;
+    while (!temp.empty()) {
+      Node *current = temp.front();
+      temp.pop();
+      std::swap(current->left, current->right);
+      if (current->left)
+        temp.push(current->left);
+      if (current->right)
+        temp.push(current->right);
+    }
   }
 
 public:
