@@ -5,16 +5,16 @@
 
 ## Content
 
-| Content                                                                                  | Status                                          |
-|------------------------------------------------------------------------------------------|-------------------------------------------------|
-| Array                                                                                    | &check;                                         |
-| Singly Linked List                                                                       | &check;                                         |
-| Doubly Linked List                                                                       | &check;                                         |
-| Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
-| Binary Tree                                                                              | -                                               |
-| Stacks                                                                                   | &cross;                                         |
-| Queues                                                                                   | &cross;                                         |
-| Hashing                                                                                  | &cross;                                         |
+| Content                                                                                  | Status                                    |
+|------------------------------------------------------------------------------------------|-------------------------------------------|
+| Array                                                                                    | -                                         |
+| Singly Linked List                                                                       | Done                                      |
+| Doubly Linked List                                                                       | Done                                      |
+| Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort | Done <br/>Done<br/>Done<br/>Done<br/>Done |
+| Binary Tree                                                                              | Ongoing                                   |
+| Stacks                                                                                   | -                                         |
+| Queues                                                                                   | -                                         |
+| Hashing                                                                                  | -                                        |
 
 
 
