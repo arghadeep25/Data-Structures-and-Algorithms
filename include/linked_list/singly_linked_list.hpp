@@ -212,7 +212,7 @@ public:
   /**
    * @brief Delete based on key
    * @details Function to delete a node based on the key element
-   * @todo Need to implement 
+   * @todo Need to implement
    * @param head_ref head reference
    * @param key value of the key
    */
