@@ -5,7 +5,9 @@
 ![visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Farghadeep25%2FData-Structures-and-Algorithms&countColor=%23263759)
 
 ![Data-Structures-and-Algorithms](https://socialify.git.ci/arghadeep25/Data-Structures-and-Algorithms/image?description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Charlie%20Brown&stargazers=1&theme=Dark)
-### Content
+
+
+## Content
 
 | Content                                                                                  | Status                                          |
 |------------------------------------------------------------------------------------------|-------------------------------------------------|
@@ -18,13 +20,16 @@
 | Queues                                                                                   | &cross;                                         |
 | Hashing                                                                                  | &cross;                                         |
 
-### Usage
+
+
+## Usage
 
 ```
 git clone git@github.com:arghadeep25/Data_Structure_Cpp.git
 cd Data_Structure_Cpp
 git submodule update --init --recursive 
 ```
+
 
 #### Build Script (Recommended)
 Build Helper
@@ -37,14 +42,26 @@ Usage: ./build.sh -b CMAKE_BUILD_TYPE -e BUILD_EXAMPLE
 ./build.sh -b Release -e OFF
 ```
 
-#### Build Manually with Example
+
+#### Build Manually 
 ```
+mkdir build && cd build
 cmake .. -DBUILD_EXAMPLE=ON -DCMAKE_BUILD_TYPE=Release
 make -j4
 ```
 
-#### Build Manually without Example
+Turning ON and OFF the examples might need to remove the build folder manually.
+
+## Documentation
+To get the documentation, use the following command
+
 ```
-cmake .. -DBUILD_EXAMPLE=OFF -DCMAKE_BUILD_TYPE=Release
-make -j4
+doxygen Doxygen.in
+```
+
+Use your favorite browser, to see the documentation
+
+```
+google-chrome documentation/html/index.html
+firefox documentation/html/index.html
 ```
