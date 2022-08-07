@@ -53,6 +53,11 @@ make -j4
 Turning ON and OFF the examples might need to remove the build folder manually.
 
 ## Documentation
+The documentation is done using Doxygen. If you don't have doxygen installed, use the following command.
+```
+sudo apt install doxygen
+```
+
 To get the documentation, use the following command
 
 ```
