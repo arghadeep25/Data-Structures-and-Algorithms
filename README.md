@@ -2,7 +2,9 @@
 
 ![workflow](https://github.com/arghadeep25/Data-Structures-and-Algorithms/actions/workflows/cmake.yml/badge.svg)
 ![visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Farghadeep25%2FData-Structures-and-Algorithms&countColor=%23263759)
-![Hits-of-Code](https://hitsofcode.com/github/arghadeep25/Data-Structures-and-Algorithms)
+[![Hits-of-Code](https://hitsofcode.com/github/arghadeep25/Data-Structures-and-Algorithms)](https://hitsofcode.com/github/arghadeep25/Data-Structures-and-Algorithms/view)
+![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)
+![C++](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)
 ![Data-Structures-and-Algorithms](https://socialify.git.ci/arghadeep25/Data-Structures-and-Algorithms/image?description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Charlie%20Brown&stargazers=1&theme=Dark)
 
 
