@@ -10,16 +10,17 @@
 
 ## Content
 
-| Content                                                                                  | Status                                          |
-|------------------------------------------------------------------------------------------|-------------------------------------------------|
-| Array                                                                                    | &check;                                         |
-| Singly Linked List                                                                       | &check;                                         |
-| Doubly Linked List                                                                       | &check;                                         |
-| Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
-| Binary Tree                                                                              | -                                               |
-| Stacks                                                                                   | &cross;                                         |
-| Queues                                                                                   | &check;                                         |
-| Hashing                                                                                  | &cross;                                         |
+| Content                                                                                                                          | Status                                          |
+|----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| Array                                                                                                                            | &check;                                         |
+| Linked List<br/> - Singly Linked List <br/> - Circular Linked List <br/> - Doubly Linked List <br/> - Doubly Circular Linked List | <br/>&check;<br/>&cross;<br/>&check;<br/>&cross; |
+| Stacks                                                                                                                           | &check;                                         |
+| Queues                                                                                                                           | &check;                                         |
+| Binary Tree                                                                                                                      | &cross;                                                |
+| Hashing                                                                                                                          | &cross;                                         |
+| Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort                                         | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
+| Searching<br/> - Linear Search<br/> - Binary Search<br/> - Interpolation Search<br/> - Jump Search                               | <br/>&cross;<br/>&cross;<br/>&cross;<br/>&cross; |
+
 
 
 
