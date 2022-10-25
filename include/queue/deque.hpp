@@ -63,8 +63,10 @@ public:
     Node *temp_node = new Node;
     if (temp_node == nullptr)
       return true;
-    else
+    else {
+      delete(temp_node);
       return false;
+    }
   }
 
   /**
@@ -83,6 +85,7 @@ public:
       temp = temp->next;
     }
     std::cout << std::endl;
+    delete(temp);
   }
 
   /**
@@ -95,9 +98,7 @@ public:
       WARNING("Queue Overflow!!");
       exit(1);
     }
-    Node *new_node = new Node;
-    new_node->data = data;
-    new_node->next = nullptr;
+    Node *new_node = new Node(data);
     if (rear_ == nullptr) {
       front_ = rear_ = new_node;
     } else {
@@ -117,10 +118,7 @@ public:
       WARNING("Queue Overflow!!");
       exit(1);
     }
-    Node *new_node = new Node;
-    new_node->data = data;
-    new_node->prev = nullptr;
-    new_node->next = nullptr;
+    Node *new_node = new Node(data);
     if (front_ == nullptr)
       rear_ = front_ = new_node;
     else {
@@ -200,12 +198,17 @@ public:
    */
 public:
   size_t size() {
-    Node *temp = front_;
     size_t size_ = 0;
+    if (isEmpty()) {
+      WARNING("Queue Underflow!!");
+      return size_;
+    }
+    Node *temp = front_;
     while (temp) {
       ++size_;
       temp = temp->next;
     }
+    delete(temp);
     return size_;
   }
 };
