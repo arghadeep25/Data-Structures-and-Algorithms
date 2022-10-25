@@ -22,9 +22,9 @@ int main(int argc, char ** argv){
   MESSAGE("Size: ",deque.size());
   deque.front();
   deque.rear();
-  deque.dequeueRear();
+  MESSAGE("Deleted: ",deque.dequeueRear());
   deque.print();
-  deque.dequeueFront();
+  MESSAGE("Deleted: ",deque.dequeueFront());
   deque.print();
   MESSAGE("Size: ",deque.size());
   deque.front();

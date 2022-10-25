@@ -18,7 +18,7 @@
 | Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
 | Binary Tree                                                                              | -                                               |
 | Stacks                                                                                   | &cross;                                         |
-| Queues                                                                                   | &cross;                                         |
+| Queues                                                                                   | &check;                                         |
 | Hashing                                                                                  | &cross;                                         |
 
 
