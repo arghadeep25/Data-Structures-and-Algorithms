@@ -7,6 +7,7 @@
  ************************************/
 
 #include <iostream>
+#include <limits>
 #include <utils/message.hpp>
 
 namespace dataStructure::stack {
@@ -146,6 +147,6 @@ public:
 
 private:
   Node *TOP = nullptr;
-  DataType max_ = static_cast<DataType>(INT8_MIN);
+  DataType max_ = std::numeric_limits<DataType>::min();
 };
 } // namespace dataStructure::stack
