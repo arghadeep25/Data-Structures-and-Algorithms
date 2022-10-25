@@ -1,33 +1,30 @@
 /************************************
-* @file deque.cpp
-* @details Double Ended Queue Example
-* @author Arghadeep Mazumder
-* @version 1.0.0
-* @copyright -
-************************************/
+ * @file deque.cpp
+ * @details Queue Example
+ * @author Arghadeep Mazumder
+ * @version 1.0.0
+ * @copyright -
+ ************************************/
 
 #include <iostream>
-#include <queue/deque.hpp>
+#include <queue/queue.hpp>
 
-int main(int argc, char ** argv){
-  using Deque = dataStructure::queue::deque<int>;
-  Deque deque;
-  deque.enqueueFront(1);
-  deque.enqueueFront(2);
-  deque.enqueueRear(4);
-  deque.enqueueRear(3);
-  deque.enqueueRear(5);
-  deque.enqueueFront(6);
-  deque.print();
-  MESSAGE("Size: ",deque.size());
-  deque.front();
-  deque.rear();
-  deque.dequeueRear();
-  deque.print();
-  deque.dequeueFront();
-  deque.print();
-  MESSAGE("Size: ",deque.size());
-  deque.front();
-  deque.rear();
-
+int main(int argc, char **argv) {
+  using Queue = dataStructure::queue::queue<int>;
+  Queue queue;
+  queue.enqueue(5);
+  queue.enqueue(4);
+  queue.enqueue(11);
+  queue.enqueue(3);
+  queue.enqueue(6);
+  queue.print();
+  MESSAGE("Size: ", queue.size());
+  MESSAGE("Front: ", queue.front());
+  MESSAGE("Rear: ", queue.rear());
+  queue.dequue();
+  queue.dequue();
+  queue.print();
+  MESSAGE("Size: ", queue.size());
+  MESSAGE("Front: ", queue.front());
+  MESSAGE("Rear: ", queue.rear());
 }
