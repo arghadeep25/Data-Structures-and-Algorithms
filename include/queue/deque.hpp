@@ -27,7 +27,7 @@ private:
     // Default constructor
   public:
     Node() = default;
-    Node(DataType data_) : data(data_), next(nullptr), prev(nullptr) {}
+    explicit Node(DataType data_) : data(data_), next(nullptr), prev(nullptr) {}
 
     // Default destructor
   public:
@@ -132,36 +132,40 @@ public:
    * @details Function to delete element from the beginning of the deque
    */
 public:
-  void dequeueFront() {
+  DataType dequeueFront() {
     if (isEmpty()) {
       WARNING("Queue Underflow!!");
       exit(1);
     }
     Node *temp = front_;
+    DataType data = temp->data;
     front_ = front_->next;
     if (front_ == nullptr)
       rear_ = nullptr;
     else
       front_->prev = nullptr;
     delete (temp);
+    return data;
   }
 
   /**
    * @details Function to delete element from the end of the deque
    */
 public:
-  void dequeueRear() {
+  DataType dequeueRear() {
     if (isEmpty()) {
       WARNING("Queue Underflow!!");
       exit(1);
     }
     Node *temp = rear_;
+    DataType data = temp->data;
     rear_ = rear_->prev;
     if (rear_ == nullptr)
       front_ = nullptr;
     else
       rear_->next = nullptr;
     delete (temp);
+    return data;
   }
 
   /**

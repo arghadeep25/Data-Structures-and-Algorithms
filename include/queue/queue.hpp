@@ -20,10 +20,10 @@ private:
     DataType data;
     Node *next;
 
-    // Constructors
   public:
+    // Constructors
     Node() = default;
-    Node(DataType data_) : data(data_), next(nullptr) {}
+    explicit Node(DataType data_) : data(data_), next(nullptr) {}
 
     // Destructor
     ~Node() = default;
@@ -33,19 +33,19 @@ private:
   Node *front_ = nullptr;
   Node *rear_ = nullptr;
 
-  // Constructor
 public:
+  // Constructor
   queue() = default;
 
-  // Destructor
 public:
+  // Destructor
   ~queue() = default;
 
+public:
   /**
    * @details Function to check whether the queue is empty or not
    * @return  true or false
    */
-public:
   bool isEmpty() {
     if (front_ == nullptr && rear_ == nullptr)
       return true;
@@ -53,26 +53,26 @@ public:
       return false;
   }
 
+public:
   /**
    * @details Function to check whether the queue is full or not
    * @return  true or false
    */
-public:
-  bool isFull(){
+  bool isFull() {
     Node *temp_node = new Node;
-    if(temp_node == nullptr)
+    if (temp_node == nullptr)
       return true;
-    else{
-      delete(temp_node);
+    else {
+      delete (temp_node);
       return false;
     }
   }
 
+public:
   /**
    * @details Function to insert elements in the queue
    * @param data
    */
-public:
   void enqueue(DataType data) {
     if (isFull()) {
       WARNING("Queue Overflow!!");
@@ -88,11 +88,11 @@ public:
     }
   }
 
+public:
   /**
    * @details Function to delete elements in the queue
    * @param data
    */
-public:
   DataType dequue() {
     if (isEmpty()) {
       WARNING("Queue Underflow!!");
@@ -110,11 +110,11 @@ public:
     return temp_val_;
   }
 
+public:
   /**
    * @details Function to get the front element of the queue
    * @return value
    */
-public:
   DataType front() {
     if (isEmpty()) {
       WARNING("Queue Underflow!!");
@@ -123,11 +123,11 @@ public:
     return front_->data;
   }
 
+public:
   /**
    * @details Function to get the end element of the queue
    * @return value
    */
-public:
   DataType rear() {
     if (isEmpty()) {
       WARNING("Queue Underflow!!");
@@ -136,11 +136,11 @@ public:
     return rear_->data;
   }
 
+public:
   /**
    * @details Function to get the size of the queue
    * @return size of deque
    */
-public:
   size_t size() {
     size_t size_ = 0;
     if (isEmpty()) {
@@ -155,10 +155,10 @@ public:
     return size_;
   }
 
+public:
   /**
    * @details Function to print the elements in the queue
    */
-public:
   void print() {
     if (isEmpty()) {
       WARNING("Queue Underflow!!");
@@ -170,7 +170,7 @@ public:
       temp = temp->next;
     }
     std::cout << std::endl;
-    delete(temp);
+    delete (temp);
   }
 };
 } // namespace dataStructure::queue
