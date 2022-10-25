@@ -146,7 +146,6 @@ public:
       temp = temp->next;
       ++size_;
     } while (temp != rear_->next);
-    delete (temp);
     return size_;
   }
 };
