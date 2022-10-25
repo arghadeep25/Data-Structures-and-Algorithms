@@ -1,5 +1,5 @@
 /************************************
- * @file deque.cpp
+ * @file queue.cpp
  * @details Queue Example
  * @author Arghadeep Mazumder
  * @version 1.0.0
