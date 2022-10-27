@@ -94,7 +94,9 @@ template <typename T, typename... Args> void MESSAGE(T t, Args... args) {
  * @param t
  * @details
  */
-template <typename T> void PRINT(T t) { std::cout << MAGENTA << t << " "; }
+template <typename T> void PRINT(T t) {
+  std::cout << MAGENTA << t << " " << RESET;
+}
 
 /**
  * @brief
@@ -130,4 +132,16 @@ template <typename T> void PRINT_DATA(T t) { std::cout << GREEN << t << ", "; }
 template <typename T, typename... Args> void PRINT_DATA(T t, Args... args) {
   std::cout << GREEN << t << ", ";
   PRINT_DATA(args...);
+}
+
+/**
+ *
+ * @tparam T
+ * @param vec
+ */
+template <typename T> void PRINT_VECTOR(const T &vec) {
+  std::cout << GREEN << "Elements: ";
+  for (const auto &elem : vec)
+    std::cout << elem << " ";
+  std::cout << RESET << std::endl;
 }
