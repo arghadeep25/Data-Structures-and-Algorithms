@@ -14,8 +14,8 @@
 |----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
 | Array                                                                                                                            | &check;                                         |
 | Linked List<br/> - Singly Linked List <br/> - Circular Linked List <br/> - Doubly Linked List <br/> - Doubly Circular Linked List | <br/>&check;<br/>&cross;<br/>&check;<br/>&cross; |
-| Stacks                                                                                                                           | &check;                                         |
-| Queues                                                                                                                           | &check;                                         |
+| Stack                                                                                                                            | &check;                                         |
+| Queues<br/> - Queue <br/> - Circular Queue <br/> - Deque <br/> - Priority Queue                                                  | <br/>&check;<br/>&check;<br/>&check;<br/>&cross; |
 | Binary Tree                                                                                                                      | &cross;                                                |
 | Hashing                                                                                                                          | &cross;                                         |
 | Sorting<br/> - Bubble Sort<br/> - Insertion Sort<br/> - Merge Sort<br/> - Selection Sort                                         | <br/>&check;<br/>&check;<br/>&check;<br/>&check; |
