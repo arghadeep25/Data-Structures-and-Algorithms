@@ -14,7 +14,7 @@ A Graph is a non-linear data structure consisting of vertices and edges. The ver
    - If there is an edge from vertex i to j, mark Mat[i][j] as 1.
    - If there is no edge from vertex i to j, mark Mat[i][j] as 0.
      <p align="center">
-      <img src="https://github.com/arghadeep25/Data-Structures-and-Algorithms/blob/master/resources/undirected_graph_am.png" width="120">
+      <img src="https://github.com/arghadeep25/Data-Structures-and-Algorithms/blob/master/resources/undirected_graph_am.png" width="360">
      </p>
 
 - ### Adjacency List
