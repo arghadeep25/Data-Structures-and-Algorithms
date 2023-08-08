@@ -7,14 +7,18 @@ A Graph is a non-linear data structure consisting of vertices and edges. The ver
 - Undirected Graph
 
 ## Representation
-- ### Adjacency Matrix Undirected Graph
-
+- ### Adjacency Matrix 
   An adjacency matrix is a way of representing a graph as a matrix of boolean (0’s and 1’s).
   Let’s assume there are n vertices in the graph So, create a 2D matrix Mat[n][n] having dimension n x n.
    - If there is an edge from vertex i to j, mark Mat[i][j] as 1.
    - If there is no edge from vertex i to j, mark Mat[i][j] as 0.
+   - #### Undirected Graph Adjacency Matrix
      <p align="center">
-      <img src="https://github.com/arghadeep25/Data-Structures-and-Algorithms/blob/master/resources/undirected_graph_am.png" width="360">
+      <img src="https://github.com/arghadeep25/Data-Structures-and-Algorithms/blob/master/resources/undirected_graph_am.png" width="480">
+     </p>
+   - #### Directed Graph Adjacency Matrix
+     <p align="center">
+      <img src="https://github.com/arghadeep25/Data-Structures-and-Algorithms/blob/master/resources/directed_graph_am.png" width="480">
      </p>
 
 - ### Adjacency List
